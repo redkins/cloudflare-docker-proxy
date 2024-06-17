@@ -1,5 +1,5 @@
 name = "cloudflare-docker-proxy"
-compatibility_date = "2023-12-01"
+compatibility_date = "2024-06-17"
 
 [dev]
 ip = "0.0.0.0"
@@ -13,13 +13,13 @@ TARGET_UPSTREAM = "https://registry-1.docker.io"
 [env.production]
 name = "cloudflare-docker-proxy"
 routes = [
-  { pattern = "docker.itwangren.com", custom_domain = true },
-  { pattern = "quey.itwangren.com", custom_domain = true },
-  { pattern = "gcr.itwangren.com", custom_domain = true },
-  { pattern = "k8s-gcr.itwangren.com", custom_domain = true },
-  { pattern = "k8s.itwangren.com", custom_domain = true },
-  { pattern = "ghcr.itwangren.com", custom_domain = true },
-  { pattern = "cloudsmith.itwangren.com", custom_domain = true },
+  { pattern = "docker.linuxk8s.com", custom_domain = true },
+  { pattern = "quey.linuxk8s.com", custom_domain = true },
+  { pattern = "gcr.linuxk8s.com", custom_domain = true },
+  { pattern = "k8s-gcr.linuxk8s.com", custom_domain = true },
+  { pattern = "k8s.linuxk8s.com", custom_domain = true },
+  { pattern = "ghcr.linuxk8s.com", custom_domain = true },
+  { pattern = "cloudsmith.linuxk8s.com", custom_domain = true },
 ]
 
 [env.production.vars]
@@ -28,7 +28,7 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-route = { pattern = "docker-staging.itwangren.com", custom_domain = true }
+route = { pattern = "docker-staging.linuxk8s.com", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
